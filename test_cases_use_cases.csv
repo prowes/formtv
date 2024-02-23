@@ -1,0 +1,15 @@
+sep=;
+Number;Priority;Description;Testing type;Steps;Expected results
+1;High;Register a new account with valid information;Functional;1. Open registration page, 2. Fill in all required fields with valid data, 3. Click on the "Register" button;Account is created successfully and user is logged in
+2;High;Register a new account with invalid information;Negative;1. Open registration page, 2. Fill in all required fields with invalid data (e.g. a non-existent email address), 3. Click on the "Register" button;Error message is displayed and account is not created
+3;High;Login with valid email and password;Functional;1. Open login page, 2. Enter valid email and password, 3. Click on the "Login" button;User is logged in successfully
+4;High;Login with invalid email and password;Negative;1. Open login page, 2. Enter invalid email and password, 3. Click on the "Login" button;Error message is displayed and user is not logged in
+5;Medium;Restore password with valid email;Functional;1. Open password restore page, 2. Enter valid email address, 3. Click on the "Restore password" button;Password restore email is sent to the specified email address
+6;Medium;Restore password with invalid email;Negative;1. Open password restore page, 2. Enter invalid email address, 3. Click on the "Restore password" button;Error message is displayed and no email is sent
+7;Medium;Register a new account with existing email;Negative;1. Open registration page, 2. Fill in all required fields with data that was used to create an account before, 3. Click on the "Register" button;Error message is displayed and account is not created
+8;Low;Verify that the registration page is displayed correctly on different browsers;Compatibility;1. Open registration page on different browsers (e.g. Chrome, Firefox, Safari, Edge);Registration page is displayed correctly on all tested browsers
+9;Low;Verify that the login page is displayed correctly on different browsers;Compatibility;1. Open login page on different browsers (e.g. Chrome, Firefox, Safari, Edge);Login page is displayed correctly on all tested browsers
+10;Low;Verify that the password restore page is displayed correctly on different browsers;Compatibility;1. Open password restore page on different browsers (e.g. Chrome, Firefox, Safari, Edge);Password restore page is displayed correctly on all tested browsers
+11;Low;Verify that the registration process is user-friendly;Usability;1. Ask testers with different backgrounds to register a new account and provide feedback;Feedback is positive and no major usability issues are identified
+12;Low;Verify that the login process is user-friendly;Usability;1. Ask testers with different backgrounds to login with valid email and password and provide feedback;Feedback is positive and no major usability issues are identified
+13;Low;Verify that the password restore process is user-friendly;Usability;1. Ask testers with different backgrounds to restore a password and provide feedback;Feedback is positive and no major usability issues are identified
