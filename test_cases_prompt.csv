@@ -1,0 +1,12 @@
+sep=,
+umber,short description,priority,testing type,steps,expected results
+1,"Verify email field accepts valid email address",High,Positive,Enter valid email address in email field and click send button,Email restore request is sent successfully
+2,"Verify email field rejects invalid email address",High,Negative,Enter invalid email address in email field and click send button,Error message is displayed for invalid email address
+3,"Verify email field accepts empty input",Low,Negative,Leave email field empty and click send button,Error message is displayed for empty email field
+4,"Verify email field accepts special characters",Medium,Negative,Enter email address with special characters in email field and click send button,Error message is displayed for invalid email address
+5,"Verify email restore functionality in different browsers",High,Compatibility,Open email restore page in different browsers,Email restore functionality works as expected in all browsers
+6,"Verify email restore functionality on different screen sizes",Medium,Usability,Open email restore page on different screen sizes,Email restore page is responsive and functional on all screen sizes
+7,"Verify email restore functionality for non-English languages",Medium,Usability,Change language settings to non-English language,Email restore functionality works as expected in non-English language
+8,"Verify email restore functionality with slow internet connection",Medium,Functional,Simulate slow internet connection and try to restore email,Email restore functionality works as expected with slow internet connection
+9,"Verify email restore functionality for restored email",Low,Positive,Restore email and try to restore it again,Email restore functionality works as expected for restored email
+10,"Verify email restore functionality for non-existent email",Low,Negative,Enter non-existent email address in email field and click send button,Error message is displayed for non-existent email address
