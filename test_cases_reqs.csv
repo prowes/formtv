@@ -1,0 +1,22 @@
+sep=;
+Number;Priority;Description;Testing type;Steps;Expected results
+1;High;User is able to click the Create new user link;Functional;1. Open registration page, 2. Click "Create new user" link;Link to the registration form is opened
+2;High;User is able to enter email;Functional;1. Open registration form, 2. Enter email in the email field;Email is entered successfully
+3;High;Email value can contain latin letters in uppercase and lowercase, digits, @ sign, dot, underscore, hyphen;Negative;1. Open registration form, 2. Enter an invalid email (e.g. "test!example.com");Error message is displayed
+4;High;Email value can not contain + / = ' " ;Negative;1. Open registration form, 2. Enter an invalid email (e.g. "test+example.com");Error message is displayed
+5;High;Email value should be at least for 8 symbols;Negative;1. Open registration form, 2. Enter an email shorter than 8 symbols (e.g. "test@e");Error message is displayed
+6;High;User is able to give a password;Functional;1. Open registration form, 2. Enter password in the password field;Password is entered successfully
+7;High;A password should be secure;Negative;1. Open registration form, 2. Enter a weak password (e.g. "123456");Error message is displayed
+8;High;Password should not contain <, >, &, ‘, “;Negative;1. Open registration form, 2. Enter a password containing forbidden symbols (e.g. "<password>");Error message is displayed
+9;High;User is able to login;Functional;1. Open login form, 2. Enter correct email and password, 3. Click "Login" button;User is logged in
+10;High;User is unable to login with incorrect email and/or password;Negative;1. Open login form, 2. Enter incorrect email and/or password, 3. Click "Login" button;Error message is displayed
+11;High;User is able to see a notification in case of incorrect email and/or password;Functional;1. Open login form, 2. Enter incorrect email and/or password, 3. Click "Login" button;Error message is displayed
+12;High;User is able to click the “Forgot my password” button;Functional;1. Open login form, 2. Click "Forgot my password" link;Password recovery form is opened
+13;High;User is able to give an email to receive email reset link;Functional;1. Open password recovery form, 2. Enter email, 3. Click "Send" button;Email with password recovery link is sent
+14;High;User is able to see a notification if incorrect email address has been given;Negative;1. Open password recovery form, 2. Enter incorrect email, 3. Click "Send" button;Error message is displayed
+15;High;User is able to receive a letter to this address;Functional;1. Check email inbox;Email with password recovery link is received
+16;High;User is able to see a link for the password restore in the letter;Functional;1. Open email with password recovery link, 2. Click the link;Password recovery form is opened
+17;High;User is able to enter a new password at the URL from the letter;Functional;1. Open password recovery form, 2. Enter a new password, 3. Click "Save" button;New password is saved
+18;High;User is able to enter a secure password;Negative;1. Open password recovery form, 2. Enter a weak password (e.g. "123456"), 3. Click "Save" button;Error message is displayed
+19;High;User is able to repeat a password;Functional;1. Open password recovery form, 2. Enter a new password, 3. Repeat the new password, 4. Click "Save" button;New password is saved
+20;High;User is able to log into with recently updated password;Functional;1. Open login form, 2. Enter email and new password, 3. Click "Login" button;User is logged in.

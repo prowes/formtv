@@ -1,0 +1,9 @@
+sep=;
+Number, Priority, Description, Testing type, Steps, Expected results
+
+1, High, Email field: Verify that the email field accepts valid email addresses,email field, Enter a valid email address (example@example.com), Expected result: Email address is accepted and displayed in the input field.
+1, High, Email field: Verify that the email field rejects invalid email addresses,email field, Enter an invalid email address (example.com), Expected result: Error message is displayed and email address is not accepted.
+1, Medium, Usability: Check that the email field is easily accessible and visible,send button, Navigate to the email restore page, Email field is the first input field and is clearly visible, Expected result: Email field is accessible and visible.
+1, Positive, Functional: Ensure that the email restore function works correctly with a valid email address,send button, Click on the send button after entering a valid email address, Receive an email with instructions to restore the email account, Expected result: Email is restored successfully.
+1, Negative, Functional: Test that the email restore function does not work with an invalid email address,send button, Click on the send button after entering an invalid email address, No email is received and an error message is displayed, Expected result: Email restore fails.
+1, Compatibility: Check that the email restore function works in different web browsers,send button, Open email restore page in Chrome, Firefox, and Edge, Click on send button in each browser, Expected result: Email restore is successful in all browsers.

@@ -1,0 +1,16 @@
+sep=;
+Number,Priority,Description,Testing type,Steps,Expected results
+1,High,"Check if the 'email field' accepts valid email addresses",Functional,1. Enter a valid email address in the 'email field', 2. Click outside of the 'email field', Email address should be accepted without any errors,
+2,High,"Check if the 'send button' is enabled after entering a valid email address",Functional,1. Enter a valid email address in the 'email field', 2. Check if the 'send button' is enabled,
+3,High,"Check if the email is restored after clicking on the 'send button'",Functional,1. Enter a valid email address in the 'email field', 2. Click on the 'send button', 3. Check if the email is restored,
+4,High,"Check if the 'email field' accepts different valid email addresses",Functional,1. Enter different valid email addresses in the 'email field', 2. Check if the email addresses are accepted without any errors,
+5,Medium,"Check if the 'email field' accepts email addresses with uppercase letters",Usability,1. Enter an email address with uppercase letters in the 'email field', 2. Check if the email address is accepted,
+6,Medium,"Check if the 'send button' is disabled when the 'email field' is empty",Usability,1. Leave the 'email field' empty, 2. Check if the 'send button' is disabled,
+7,Medium,"Check if the 'send button' is disabled when the 'email field' contains invalid email addresses",Usability,1. Enter invalid email addresses in the 'email field', 2. Check if the 'send button' is disabled,
+8,Medium,"Check if the 'email field' accepts email addresses with special characters",Usability,1. Enter an email address with special characters in the 'email field', 2. Check if the email address is accepted,
+9,Low,"Check if the 'email field' accepts email addresses with non-English characters",Compatibility,1. Enter an email address with non-English characters in the 'email field', 2. Check if the email address is accepted,
+10,Low,"Check if the 'send button' is displayed properly on different screen sizes",Compatibility,1. Open the application on different screen sizes, 2. Check if the 'send button' is displayed properly,
+11,Low,"Check if the 'email field' accepts email addresses with numbers",Negative,1. Enter an email address with numbers in the 'email field', 2. Check if the email address is accepted,
+12,Low,"Check if the 'send button' is enabled when the 'email field' contains invalid email addresses",Negative,1. Enter invalid email addresses in the 'email field', 2. Check if the 'send button' is enabled,
+13,Low,"Check if the 'email field' accepts email addresses with missing '@' symbol",Negative,1. Enter an email address with missing '@' symbol in the 'email field', 2. Check if the email address is accepted,
+14,Low,"Check if the 'email field' accepts email addresses with missing '.' symbol",Negative,1. Enter an email address with missing '.' symbol in the 'email field', 2. Check if the email address is accepted.
