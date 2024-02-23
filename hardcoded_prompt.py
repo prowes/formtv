@@ -17,7 +17,7 @@ def main():
     sut_elements = ["email field", "send button"]
     testing_types = ["functional", "usability", "compatibility", "negative", "positive"]
     columns = ["Number", "Priority", "Description", "Testing type", "Steps", "Expected results"]
-    prompt = f"Write a list of test cases for {sut} with {sut_elements}. Outcome should be ready for instant convertation to the csv file with ; as a separator. Don't add any other text. Use different testing types, such as, but not limited to, {testing_types}. Use columns {columns}. One line is one test case, don't add extra blank lines. DO NOT add testing type in the Description column. In Steps, each step is one numbered action (1, 2, etc), separate every step with a comma ONLY, don't add ; sign there. In Expected results column, text for each case should be splitted and not numbered."
+    prompt = f"Write a list of test cases for {sut} with {sut_elements}. Outcome should be ready for instant converting to the csv file with ; as a separator. Don't add any other text. Use different testing types, such as, but not limited to, {testing_types}. Use columns {columns}. One line is one test case, don't add extra blank lines. DO NOT add testing type values to the test cases descriptions. In Steps, each step is one numbered action (1, 2, etc), separate every step with a comma ONLY, don't add ; sign there. In Expected results column, text for each case should be splitted and not numbered."
 
     chat_response = client.chat(
         model=model,
