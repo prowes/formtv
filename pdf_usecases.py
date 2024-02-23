@@ -12,9 +12,9 @@ def main():
         text = page.get_text() 
         usecases += text
     api_key = os.environ["MISTRAL_API_KEY"]
-    model = "mistral-small"
+    #model = "mistral-small"
     #model = "mistral-tiny"
-    #model = "mistral-medium"  # the best one.
+    model = "mistral-medium"  # the best one.
 
     client = MistralClient(api_key=api_key)
     testing_types = ["functional", "usability", "compatibility", "negative"]
@@ -28,7 +28,7 @@ def main():
     cases = chat_response.choices[0].message.content
     if cases[0] == '"':
         cases = cases[1:-1]# remove " symbols
-    with open("test_cases_use_cases_small.csv", "w") as file:
+    with open("test_cases_use_cases.csv", "w") as file:
         file.write("sep=;\n")  # User-friendly Excel
         file.write(cases)
 
