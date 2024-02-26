@@ -9,9 +9,9 @@ def main():
     pic = ""
     mistral_api_key = os.environ["MISTRAL_API_KEY"]
     cloudmersive_api_key = os.environ["CLOUDMERSIVE_API_KEY"]
-    model = "mistral-small"
+    #model = "mistral-small"
     #model = "mistral-tiny"
-    #model = "mistral-medium"  # the best one.
+    model = "mistral-medium"  # the best one.
 
     configuration = cloudmersive_ocr_api_client.Configuration()
     configuration.api_key['Apikey'] = cloudmersive_api_key
@@ -33,7 +33,7 @@ def main():
     print(cases)
     if cases[0] == '"':
         cases = cases[1:-1]  # remove " symbols
-    with open("test_cases_screenshot_small.csv", "w") as file:
+    with open("test_cases_med.csv", "w") as file:
         file.write("sep=;\n")  # User-friendly Excel
         file.write(cases)
 
