@@ -1,16 +1,14 @@
 sep=;
-Number,Priority,Description,Testing type,Steps,Expected results
-1,High,"Check if the 'email field' accepts valid email addresses",Functional,1. Enter a valid email address in the 'email field', 2. Click outside of the 'email field', Email address should be accepted without any errors,
-2,High,"Check if the 'send button' is enabled after entering a valid email address",Functional,1. Enter a valid email address in the 'email field', 2. Check if the 'send button' is enabled,
-3,High,"Check if the email is restored after clicking on the 'send button'",Functional,1. Enter a valid email address in the 'email field', 2. Click on the 'send button', 3. Check if the email is restored,
-4,High,"Check if the 'email field' accepts different valid email addresses",Functional,1. Enter different valid email addresses in the 'email field', 2. Check if the email addresses are accepted without any errors,
-5,Medium,"Check if the 'email field' accepts email addresses with uppercase letters",Usability,1. Enter an email address with uppercase letters in the 'email field', 2. Check if the email address is accepted,
-6,Medium,"Check if the 'send button' is disabled when the 'email field' is empty",Usability,1. Leave the 'email field' empty, 2. Check if the 'send button' is disabled,
-7,Medium,"Check if the 'send button' is disabled when the 'email field' contains invalid email addresses",Usability,1. Enter invalid email addresses in the 'email field', 2. Check if the 'send button' is disabled,
-8,Medium,"Check if the 'email field' accepts email addresses with special characters",Usability,1. Enter an email address with special characters in the 'email field', 2. Check if the email address is accepted,
-9,Low,"Check if the 'email field' accepts email addresses with non-English characters",Compatibility,1. Enter an email address with non-English characters in the 'email field', 2. Check if the email address is accepted,
-10,Low,"Check if the 'send button' is displayed properly on different screen sizes",Compatibility,1. Open the application on different screen sizes, 2. Check if the 'send button' is displayed properly,
-11,Low,"Check if the 'email field' accepts email addresses with numbers",Negative,1. Enter an email address with numbers in the 'email field', 2. Check if the email address is accepted,
-12,Low,"Check if the 'send button' is enabled when the 'email field' contains invalid email addresses",Negative,1. Enter invalid email addresses in the 'email field', 2. Check if the 'send button' is enabled,
-13,Low,"Check if the 'email field' accepts email addresses with missing '@' symbol",Negative,1. Enter an email address with missing '@' symbol in the 'email field', 2. Check if the email address is accepted,
-14,Low,"Check if the 'email field' accepts email addresses with missing '.' symbol",Negative,1. Enter an email address with missing '.' symbol in the 'email field', 2. Check if the email address is accepted.
+Title;Automation Type;Estimate;Preconditions;Priority;Steps(Step);Steps(Expected Results);Type
+"Verify email field is present";Automated;10s;Email restore page is open;High;1.Navigate to the email restore page;2.Check if email field is present;"Functional"
+"Verify send button is present";Automated;10s;Email restore page is open;High;1.Navigate to the email restore page;2.Check if send button is present;"Functional"
+"Verify email field is accepting input";Automated;15s;Email restore page is open;High;1.Navigate to the email restore page;2.Click on email field;3.Input a valid email address;"Functional"
+"Verify email field is not accepting non-email input";Automated;15s;Email restore page is open;High;1.Navigate to the email restore page;2.Click on email field;3.Input a non-email value;"Negative"
+"Verify send button is enabled after entering valid email";Automated;15s;Email restore page is open;High;1.Navigate to the email restore page;2.Enter a valid email address;3.Check if send button is enabled;"Functional"
+"Verify send button is disabled after entering invalid email";Automated;15s;Email restore page is open;High;1.Navigate to the email restore page;2.Enter an invalid email address;3.Check if send button is disabled;"Negative"
+"Verify email is restored successfully";Manual;30s;Email is sent with restore link;High;1.Open the restore link from the email;2.Check if the user's email is restored;"Functional"
+"Verify email restore page is accessible";Manual;30s;User is logged in;High;1.Log in to the application;2.Navigate to the email restore page;"Usability"
+"Verify email restore page is compatible with different browsers";Automated;60s;Email restore page is open;Medium;1.Navigate to the email restore page in different browsers;2.Check if the page is displayed correctly;"Compatibility"
+"Verify email restore page is responsive";Automated;60s;Email restore page is open;Medium;1.Resize the browser window;2.Check if the page is displayed correctly;"Compatibility"
+"Verify error message is displayed when sending without entering email";Automated;15s;Email restore page is open;High;1.Navigate to the email restore page;2.Click on send button;3.Check if error message is displayed;"Negative"
+"Verify error message is displayed when sending invalid email";Automated;15s;Email restore page is open;High;1.Navigate to the email restore page;2.Enter an invalid email address;3.Click on send button;4.Check if error message is displayed;"Negative"
