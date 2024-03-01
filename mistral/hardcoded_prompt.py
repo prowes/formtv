@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import os
 
 from mistralai.client import MistralClient
@@ -8,8 +6,6 @@ from mistralai.models.chat_completion import ChatMessage
 
 def main():
     api_key = os.environ["MISTRAL_API_KEY"]
-    #model = "mistral-small"
-    #model = "mistral-tiny"
     model = "mistral-medium"  # the best one.
 
     client = MistralClient(api_key=api_key)
@@ -28,7 +24,7 @@ def main():
         cases = cases[1:-1]# remove " symbols
 
     print(cases)
-    with open("test_cases_prompt_medium.csv", "w") as file:
+    with open("results\\test_cases_prompt_medium.csv", "w") as file:
         file.write("sep=;\n")  # User-friendly Excel
         file.write(cases)
 

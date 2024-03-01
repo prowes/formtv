@@ -3,7 +3,7 @@ import fitz
 
 
 def main():
-    doc = fitz.open("usecases.pdf")
+    doc = fitz.open("..\\resources\\usecases.pdf")
     usecases = ""
     for page in doc:
         text = page.get_text()

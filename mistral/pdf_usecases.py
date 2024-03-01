@@ -6,14 +6,12 @@ from mistralai.models.chat_completion import ChatMessage
 
 
 def main():
-    doc = fitz.open('usecases.pdf')
+    doc = fitz.open('..\\resources\\usecases.pdf')
     usecases = ""
     for page in doc: 
         text = page.get_text() 
         usecases += text
     api_key = os.environ["MISTRAL_API_KEY"]
-    #model = "mistral-small"
-    #model = "mistral-tiny"
     model = "mistral-medium"  # the best one.
 
     client = MistralClient(api_key=api_key)
@@ -28,7 +26,7 @@ def main():
     cases = chat_response.choices[0].message.content
     if cases[0] == '"':
         cases = cases[1:-1]# remove " symbols
-    with open("test_cases_use_cases.csv", "w") as file:
+    with open("results\\test_cases_use_cases.csv", "w") as file:
         file.write("sep=;\n")  # User-friendly Excel
         file.write(cases)
 

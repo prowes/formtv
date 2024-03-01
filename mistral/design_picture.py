@@ -9,17 +9,16 @@ def main():
     pic = ""
     mistral_api_key = os.environ["MISTRAL_API_KEY"]
     cloudmersive_api_key = os.environ["CLOUDMERSIVE_API_KEY"]
-    #model = "mistral-small"
-    #model = "mistral-tiny"
     model = "mistral-medium"  # the best one.
 
     configuration = cloudmersive_ocr_api_client.Configuration()
     configuration.api_key['Apikey'] = cloudmersive_api_key
     api_instance = cloudmersive_ocr_api_client.ImageOcrApi(cloudmersive_ocr_api_client.ApiClient(configuration))
-    image_file = 'design.png' 
+    image_file = '..\\resources\\design.png'
     api_response = api_instance.image_ocr_post(image_file)
     texts_from_pics = (api_response._text_result)  # get texts from the image
 
+    print(texts_from_pics)
     client = MistralClient(api_key=mistral_api_key)
     testing_types = ["functional", "usability", "compatibility", "negative"]
     columns = ["Title", "Automation Type", "Estimate", "Preconditions", "Priority", "Steps(Step)", "Steps(Expected Results)", "Type"]
@@ -33,7 +32,7 @@ def main():
     print(cases)
     if cases[0] == '"':
         cases = cases[1:-1]  # remove " symbols
-    with open("test_cases_med.csv", "w") as file:
+    with open("results\\test_cases_med.csv", "w") as file:
         file.write("sep=;\n")  # User-friendly Excel
         file.write(cases)
 

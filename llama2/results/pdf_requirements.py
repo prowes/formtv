@@ -3,7 +3,7 @@ import fitz
 
 
 def main():
-    doc = fitz.open('requirements.pdf')
+    doc = fitz.open('..\\resources\\requirements.pdf')
     reqs = ""
     for page in doc:
         text = page.get_text()
