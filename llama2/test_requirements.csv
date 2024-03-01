@@ -1,0 +1,113 @@
+
+| Number | Priority | Description | Testing Type | Steps | Expected Results |
+| --- | --- | --- | --- | --- | --- |
+| 1 | High | User is able to register a new account | Functional | 1. Click the "Create new user" link<br>2. Enter email address<br>3. Give password<br>4. Click the "Sign up" button<br>5. Verify that the user has been registered successfully and logged in automatically | User is able to click the "Create new user" link, enter email address and give password<br>User is able to sign up with a correct email and password<br>User is logged in automatically after successful registration |
+| 2 | High | User is able to login | Functional | 1. Click the "Login" button<br>2. Enter email address<br>3. Give password<br>4. Click the "Log in" button<br>5. Verify that the user has been logged in successfully | User is able to click the "Login" button, enter email address and give password<br>User is able to log in with a correct email and password<br>User is logged in automatically after successful login |
+| 3 | High | User is able to restore a password | Functional | 1. Click the "Forgot my password" button<br>2. Enter email address<br>3. Verify that an email has been sent with the reset link<br>4. Follow the instructions in the email and enter the new password<br>5. Log in with the updated password | User is able to click the "Forgot my password" button, enter email address and receive an email with a reset link<br>User is able to follow the instructions in the email and enter a new password<br>User is able to log in with the updated password |
+| 4 | High | User is able to see a notification in case of incorrect email and/or password | Functional | 1. Enter an invalid email address or password<br>2. Click the "Sign up" button or "Log in" button<br>3. Verify that a notification has been displayed with an error message | User is able to enter an invalid email address or password and see a notification with an error message<br>User is not able to sign up or log in with incorrect email or password |
+| 5 | Medium | User is unable to login with incorrect email and/or password | Functional | 1. Enter an invalid email address or password<br>2. Click the "Sign up" button or "Log in" button<br>3. Verify that the user is not able to log in successfully | User is not able to enter an invalid email address or password and sign up or log in successfully |
+| 6 | High | User is able to see a link for the password restore in the letter | Functional | 1. Receive an email with instructions on how to reset the password<br>2. Click the "Reset password" link<br>3. Verify that the user is redirected to the password restore page | User is able to receive an email with instructions on how to reset the password<br>User is able to click the "Reset password" link and be redirected to the password restore page |
+| 7 | High | User is able to enter a new password at the URL from the letter | Functional | 1. Enter a new password at the URL from the letter<br>2. Verify that the user is logged in successfully with the new password | User is able to enter a new password at the URL from the letter and be logged in successfully with the new password |
+| 8 | High | User is able to enter a secure password | Functional | 1. Enter a password that meets the security requirements<br>2. Verify that the user is able to log in successfully with the secure password | User is able to enter a password that meets the security requirements and is able to log in successfully with it |
+| 9 | High | User is able to repeat a password | Functional | 1. Enter a password that meets the security requirements<br>2. Verify that the user is able to log in successfully with the secure password<br>3. Enter the same password twice and verify that the passwords match | User is able to enter a password that meets the security requirements, is able to log in successfully with it, and is able to repeat the password correctly |
+| 10 | High | User is able to log into with recently updated password, but not limited to them | Functional | 1. Enter an old password that has been recently updated<br>2. Verify that the user is not able to log in successfully with the old password<br>3. Enter the new password and verify that the user is able to log in successfully with it | User is able to enter an old password that has been recently updated, but is not able to log in successfully with it<br>User is able to enter the new password and be logged in successfully with it |
+| 11 | High | User is able to see a notification in case of incorrect email and/or password | Functional | 1. Enter an invalid email address or password<br>2. Click the "Sign up" button or "Log in" button<br>3. Verify that a notification has been displayed with an error message | User is able to enter an invalid email address or password and see a notification with an error message<br>User is not able to sign up or log in with incorrect email or password |
+| 12 | Medium | User is unable to login with incorrect email and/or password | Functional | 1. Enter an invalid email address or password<br>2. Click the "Sign up" button or "Log in" button<br>3. Verify that the user is not able to log in successfully | User is not able to enter an invalid email address or password and sign up or log in successfully |
+| 13 | High | User is able to see a link for the password restore in the letter | Functional | 1. Receive an email with instructions on how to reset the password<br>2. Click the "Reset password" link<br>3. Verify that the user is redirected to the password restore page | User is able to receive an email with instructions on how to reset the password<br>User is able to click the "Reset password" link and be redirected to the password restore page |
+| 14 | High | User is able to enter a new password at the URL from the letter | Functional | 1. Enter a new password at the URL from the letter<br>2. Verify that the user is logged in successfully with the new password | User is able to enter a new password at the URL from the letter and be logged in successfully with the new password |
+| 15 | High | User is able to enter a secure password | Functional | 1. Enter a password that meets the security requirements<br>2. Verify that the user is able to log in successfully with the secure password | User is able to enter a password that meets the security requirements and is able to log in successfully with it |
+| 16 | High | User is able to repeat a password | Functional | 1. Enter a password that meets the security requirements<br>2. Verify that the user is able to log in successfully with the secure password<br>3. Enter the same password twice and verify that the passwords match | User is able to enter a password that meets the security requirements, is able to log in successfully with it, and is able to repeat the password correctly |
+| 17 | High | User is able to log into with recently updated password, but not limited to them | Functional | 1. Enter an old password that has been recently updated<br>2. Verify that the user is not able to log in successfully with the old password<br>3. Enter the new password and verify that the user is able to log in successfully with it | User is able to enter an old password that has been recently updated, but is not able to log in successfully with it<br>User is able to enter the new password and be logged in successfully with it |
+
+## 4. Implementation
+
+The implementation of this functionality can be divided into several phases:
+- Phase 1: Basic user authentication system
+- Phase 2: Password recovery system
+- Phase 3: User registration system
+- Phase 4: Role management system
+
+### 4.1 Phase 1: Basic user authentication system
+
+This phase is the first stage of the implementation and will deal with basic user authentication, including creating a user account, logging in, and sending an email for password resetting. This system should be able to meet the following requirements:
+- Users can log in using their usernames and passwords
+- Users can register new accounts using an email address and a password
+- An email will be sent to the registered email address with instructions on how to reset the password
+- A user who has forgotten their password can reset it by providing their username or email
+
+To implement this phase, the following steps are required:
+1. Define the system's architecture, including the database schema and API endpoints
+2. Implement authentication for users using a username and password
+3. Implement a registration process that creates new accounts using an email address and password
+4. Implement sending an email with instructions on how to reset the password
+5. Test the system's functionality and ensure it meets the requirements
+6. Deploy the system to a production environment
+7. Monitor the system for any issues or errors
+8. Provide support for users who have forgotten their passwords or need help signing in
+9. Document the system's architecture, including the database schema and API endpoints
+10. Implement security measures such as password hashing and salting
+
+### 4.2 Phase 2: Password recovery system
+
+This phase will be implemented after the basic authentication system has been completed. The goal of this system is to enable users to reset their passwords if they have forgotten them, or if someone else knows their username or email address. This system should be able to meet the following requirements:
+- Users can request a password reset using their username or email address
+- An email will be sent to the registered email address with instructions on how to reset the password
+- The user is given an option to confirm the password change using a temporary token
+- The user's password is only changed after a successful password change attempt
+
+To implement this phase, the following steps are required:
+1. Define the system's architecture, including the database schema and API endpoints
+2. Implement a password reset process that uses a username or email address to send an email with instructions on how to reset the password
+3. Implement sending a temporary token using an email address with instructions on how to confirm the password change
+4. Implement a password change mechanism that only allows a successful password change after confirmation of the temporary token
+5. Test the system's functionality and ensure it meets the requirements
+6. Deploy the system to a production environment
+7. Monitor the system for any issues or errors
+8. Provide support for users who have forgotten their passwords or need help signing in
+9. Document the system's architecture, including the database schema and API endpoints
+10. Implement security measures such as password hashing and salting
+
+### 4.3 Phase 3: User registration system
+
+This phase will be implemented after the basic authentication system has been completed. The goal of this system is to enable users to register new accounts using an email address and a password. This system should be able to meet the following requirements:
+- Users can register new accounts using an email address and password
+- An email will be sent to the registered email address with instructions on how to confirm the account creation
+- The user is given an option to confirm the account creation using a temporary token
+- Only after successful account creation, the user will be able to log in to the system
+
+To implement this phase, the following steps are required:
+1. Define the system's architecture, including the database schema and API endpoints
+2. Implement a registration process that creates new accounts using an email address and password
+3. Implement sending a temporary token using an email address with instructions on how to confirm the account creation
+4. Implement a mechanism for confirming the account creation after receiving the temporary token
+5. Test the system's functionality and ensure it meets the requirements
+6. Deploy the system to a production environment
+7. Monitor the system for any issues or errors
+8. Provide support for users who have forgotten their passwords or need help signing in
+9. Document the system's architecture, including the database schema and API endpoints
+10. Implement security measures such as password hashing and salting
+
+### 4.4 Phase 4: Role management system
+
+This phase will be implemented after the basic authentication system has been completed. The goal of this system is to enable admins to manage roles for users in a more efficient way. This system should be able to meet the following requirements:
+- Admins can assign roles to users
+- Users can view their assigned roles
+- Admins can remove roles from users
+
+To implement this phase, the following steps are required:
+1. Define the system's architecture, including the database schema and API endpoints
+2. Implement a role management process that allows admins to assign, view, and remove roles for users
+3. Test the system's functionality and ensure it meets the requirements
+4. Deploy the system to a production environment
+5. Monitor the system for any issues or errors
+6. Provide support for admins who need help managing roles
+7. Document the system's architecture, including the database schema and API endpoints
+8. Implement security measures such as password hashing and salting
+9. Implement access control so that only authorized users can access the system
+10. Test the system for any security vulnerabilities
+
+## 5. Conclusion
+
+In this proposal, we have outlined a system architecture and implementation plan to build an authentication system with basic user authentication, password recovery, and role management features. This system will be scalable, secure, and easy to use. The system should also ensure that users can log in using their usernames and passwords.
+
+

@@ -1,0 +1,20 @@
+Title;Automation Type;Estimate;Preconditions;Priority;Steps(Step);Steps(Expected Results);Type
+Valid login;Manual;30s;;1;Enter valid email, Enter valid password, Click Sign in;Login successful, User is redirected to homepage;Functional
+Invalid email;Manual;30s;;1;Enter invalid email, Enter valid password, Click Sign in;"Error message ""Please enter a valid email"" is displayed";Negative
+Empty email;Manual;30s;;1;Enter empty email, Enter valid password, Click Sign in;"Error message ""Email cannot be empty"" is displayed";Negative
+Empty password;Manual;30s;;1;Enter valid email, Enter empty password, Click Sign in;"Error message ""Password cannot be empty"" is displayed";Negative
+Password too short;Manual;30s;;1;Enter valid email, Enter password less than 8 characters, Click Sign in;"Error message ""Password must be at least 8 characters"" is displayed";Negative
+Forgot password;Manual;30s;;1;Enter valid email, Click Forgot your password?;Password reset email is sent to user's email address;Functional
+Invalid password reset;Manual;30s;Password reset email received;1;Enter invalid password reset link, Enter new password, Click Reset password;"Error message ""Invalid password reset link"" is displayed";Negative
+Create account;Manual;30s;;1;Click Create account, Enter valid email, Enter valid password, Click Sign up;Account is created and user is redirected to homepage;Functional
+Duplicate email;Manual;30s;;1;Click Create account, Enter existing email, Enter valid password, Click Sign up;"Error message ""Email already exists"" is displayed";Negative
+Compatibility - Chrome;Automated;60s;;1;Open login page in Chrome browser, Enter valid email, Enter valid password, Click Sign in;Login successful, User is redirected to homepage;Compatibility
+Compatibility - Firefox;Automated;60s;;1;Open login page in Firefox browser, Enter valid email, Enter valid password, Click Sign in;Login successful, User is redirected to homepage;Compatibility
+Compatibility - Edge;Automated;60s;;1;Open login page in Edge browser, Enter valid email, Enter valid password, Click Sign in;Login successful, User is redirected to homepage;Compatibility
+Usability - mobile view;Manual;30s;;1;Open login page in mobile browser, Enter valid email, Enter valid password, Click Sign in;Login successful, User is redirected to homepage;Usability
+Usability - keyboard navigation;Manual;30s;;1;Open login page, Use keyboard to enter valid email, Use keyboard to enter valid password, Use keyboard to click Sign in;Login successful, User is redirected to homepage;Usability
+Usability - screen reader;Manual;60s;;1;Open login page with screen reader, Enter valid email, Enter valid password, Click Sign in;Screen reader announces successful login and user is redirected to homepage;Usability
+Negative - invalid characters in email;Manual;30s;;1;Enter email with invalid characters, Enter valid password, Click Sign in;"Error message ""Please enter a valid email"" is displayed";Negative
+Negative - invalid characters in password;Manual;30s;;1;Enter valid email, Enter password with invalid characters, Click Sign in;"Error message ""Password must contain only letters, numbers, or special characters"" is displayed";Negative
+Negative - excessively long email;Manual;30s;;1;Enter excessively long email, Enter valid password, Click Sign in;"Error message ""Email cannot exceed 255 characters"" is displayed";Negative
+Negative - excessively long password;Manual;30s;;1;Enter valid email, Enter excessively long password, Click Sign in;"Error message ""Password cannot exceed 128 characters"" is displayed";Negative
