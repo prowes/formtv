@@ -1,31 +1,15 @@
 sep=;
-Title;Automation Type;Estimate;Preconditions;Priority;Steps(Step);Steps(Expected Results);Type
-Register account with valid data;Functional;30s;User is on the registration page;High;1. Enter valid email and password, 2. Confirm password, 3. Click "Register";User is redirected to the dashboard, Account is created successfully;Positive
-
-Register account with invalid email;Negative;30s;User is on the registration page;Medium;1. Enter invalid email and valid password, 2. Confirm password, 3. Click "Register";Error message is displayed for invalid email format;Negative
-
-Register account with existing email;Negative;30s;User is on the registration page;Medium;1. Enter existing email and valid password, 2. Confirm password, 3. Click "Register";Error message is displayed for duplicate email;Negative
-
-Login with valid credentials;Functional;30s;User is on the login page;High;1. Enter valid email and password, 2. Click "Login";User is redirected to the dashboard;Positive
-
-Login with invalid credentials;Negative;30s;User is on the login page;Medium;1. Enter invalid email and password, 2. Click "Login";Error message is displayed for invalid email or password;Negative
-
-Restore password with valid email;Functional;30s;User is on the password restore page;Medium;1. Enter valid email, 2. Click "Restore";Password restore email is sent to the user;Positive
-
-Restore password with invalid email;Negative;30s;User is on the password restore page;Medium;1. Enter invalid email, 2. Click "Restore";Error message is displayed for invalid email;Negative
-
-Restore password with non-registered email;Negative;30s;User is on the password restore page;Medium;1. Enter non-registered email, 2. Click "Restore";Error message is displayed for non-registered email;Negative
-
-Verify password restore functionality;Functional;60s;User has a registered account and has forgotten the password;High;1. Request for password restore from password restore page, 2. Check email for password restore link, 3. Click on the link to reset password, 4. Enter new password and confirm password, 5. Click "Save";Password is successfully reset;Positive
-
-Verify password restore functionality for non-registered email;Negative;60s;User does not have a registered account;Medium;1. Request for password restore from password restore page, 2. Check email for password restore link, 3. Click on the link to reset password, 4. Enter new password and confirm password, 5. Click "Save";Error message is displayed for non-registered email;Negative
-
-Verify password restore functionality for invalid email;Negative;60s;User has a registered account but enters invalid email for password restore;Medium;1. Request for password restore from password restore page, 2. Check email for password restore link, 3. Click on the link to reset password, 4. Enter new password and confirm password, 5. Click "Save";Error message is displayed for invalid email;Negative
-
-Verify compatibility of registration page on different browsers;Compatibility;120s;User is on the registration page on different browsers(Chrome, Firefox, Safari, etc.);Medium;1. Open registration page on different browsers, 2. Enter valid email and password, 3. Confirm password, 4. Click "Register";User is able to register successfully on all browsers;Compatibility
-
-Verify usability of registration page;Usability;120s;User is on the registration page;Medium;1. Check if all form fields are clearly labeled, 2. Check if error messages are displayed for invalid input, 3. Check if password strength indicator is working properly, 4. Check if the registration button is enabled only after all fields are filled;All form fields are clearly labeled, Error messages are displayed for invalid input, Password strength indicator is working properly, Registration button is enabled only after all fields are filled;Usability
-
-Verify usability of login page;Usability;120s;User is on the login page;Medium;1. Check if all form fields are clearly labeled, 2. Check if error messages are displayed for invalid input, 3. Check if password visibility toggle is working properly, 4. Check if the login button is enabled only after all fields are filled;All form fields are clearly labeled, Error messages are displayed for invalid input, Password visibility toggle is working properly, Login button is enabled only after all fields are filled;Usability
-
-Verify usability of password restore page;Usability;120s;User is on the password restore page;Medium;1. Check if the email input field is clearly labeled, 2. Check if error messages are displayed for invalid input, 3. Check if the restore button is enabled only after the email field is filled;Email input field is clearly labeled, Error messages are displayed for invalid input, Restore button is enabled only after the email field is filled;Usability
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Register a new account;Functional;60s;User is on the registration page;High;1. Enter valid email address, password, and confirm password, 2. Click on the "Sign up" button;Account is created and user is logged in
+Login with a valid email and password pair;Functional;30s;User is on the login page;High;1. Enter valid email address and password, 2. Click on the "Login" button;User is logged in and redirected to the homepage
+Restore a password;Functional;60s;User is on the password restore page;High;1. Enter valid email address, 2. Click on the "Restore password" button, 3. Check email inbox for the password restore link, 4. Click on the password restore link, 5. Enter a new password and confirm password, 6. Click on the "Save" button;Password is restored and user is able to log in with the new password
+Verify that user is unable to register with an existing email;Negative;30s;User is on the registration page;Medium;1. Enter an email address that is already registered, 2. Enter password and confirm password, 3. Click on the "Sign up" button;Error message is displayed indicating that the email address is already in use
+Verify that user is unable to log in with an invalid email or password;Negative;30s;User is on the login page;Medium;1. Enter an invalid email address or password, 2. Click on the "Login" button;Error message is displayed indicating that the email or password is incorrect
+Verify that user is unable to restore a password with an invalid email;Negative;30s;User is on the password restore page;Medium;1. Enter an invalid email address, 2. Click on the "Restore password" button;Error message is displayed indicating that the email address is not found
+Verify that user is unable to restore a password without clicking on the restore link;Negative;30s;User has requested a password restore;Medium;1. Enter a new password and confirm password, 2. Click on the "Save" button;Error message is displayed indicating that the password restore link is invalid or expired
+Verify that the password strength requirements are enforced;Negative;30s;User is on the registration or password restore page;Low;1. Enter a password that does not meet the strength requirements, 2. Attempt to proceed;Error message is displayed indicating that the password does not meet the strength requirements
+Verify that the password reset link is only valid for a limited time;Functional;60s;User has requested a password reset;Low;1. Wait for the password reset link to expire, 2. Click on the password reset link;Error message is displayed indicating that the password reset link is invalid or expired
+Verify that the password reset link can only be used once;Functional;60s;User has requested a password reset;Low;1. Click on the password reset link and update the password, 2. Click on the password reset link again;Error message is displayed indicating that the password reset link is invalid or expired
+Verify that the user is able to log in after restoring their password;Functional;30s;User has restored their password;Low;1. Enter the new email and password, 2. Click on the "Login" button;User is logged in and redirected to the homepage
+Verify that the user is able to log out;Functional;30s;User is logged in;Low;1. Click on the "Logout" button;User is logged out and redirected to the login page
+Verify that the user is able to change their password;Functional;60s;User is logged in;Low;1. Click on the "Change password" link, 2. Enter the current password, new password, and confirm password, 3. Click on the "Save" button;Password is updated and user is logged in with the new password.

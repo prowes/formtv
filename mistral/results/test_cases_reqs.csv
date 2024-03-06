@@ -1,34 +1,12 @@
-Title;Automation Type;Estimate;Preconditions;Priority;Steps(Step);Steps(Expected Results);Type
-User can register a new account;Functional;90s;User is on the registration page;High;"1. Click on the ""Create new user"" link";The registration form is displayed;Positive
-User can enter a valid email;Functional;30s;Registration form is displayed;High;1. Enter an email address that meets the requirements specified in 1.2.1;The email address is accepted;Positive
-User cannot enter an invalid email;Negative;30s;Registration form is displayed;High;1. Enter an email address that does not meet the requirements specified in 1.2.1;The email address is rejected;Negative
-User can enter a secure password;Functional;30s;Registration form is displayed;High;1. Enter a password that meets the requirements specified in 1.3.1;The password is accepted;Positive
-User cannot enter an insecure password;Negative;30s;Registration form is displayed;High;1. Enter a password that does not meet the requirements specified in 1.3.1;The password is rejected;Negative
-User can log in with correct credentials;Functional;30s;User is on the login page;High;"1. Enter a valid email address
-2. Enter the correct password
-3. Click the ""Login"" button";The user is logged in;Positive
-User cannot log in with incorrect credentials;Negative;30s;User is on the login page;High;"1. Enter an invalid email address or password
-2. Click the ""Login"" button";The user is not logged in and sees an error message;Negative
-User can reset their password;Functional;60s;User is on the login page;Medium;"1. Click the ""Forgot my password"" button
-2. Enter a valid email address
-3. Click the ""Submit"" button
-4. Open the email client
-5. Click the password reset link
-6. Enter a new password that meets the requirements specified in 3.6
-7. Click the ""Submit"" button
-8. Log in with the new password";The user is logged in;Positive
-User cannot reset their password with an invalid email address;Negative;30s;User is on the login page;Medium;"1. Click the ""Forgot my password"" button
-2. Enter an invalid email address
-3. Click the ""Submit"" button";The user sees an error message;Negative
-User can see an error message for incorrect email/password;Functional;30s;User is on the login page;High;"1. Enter an invalid email address or password
-2. Click the ""Login"" button";The user sees an error message;Positive
-User can see a password strength indicator;Usability;30s;Registration form is displayed;Medium;1. Enter a password;The password strength indicator shows the strength of the password;Positive
-User can see password requirements;Usability;30s;Registration form is displayed;Medium;1. Hover over the password field;The password requirements are displayed;Positive
-The website is compatible with different browsers;Compatibility;60s;User is on the registration page;Medium;1. Open the website in different browsers;The website is displayed correctly and all features are functional;Positive
-The website is compatible with different screen sizes;Compatibility;60s;User is on the registration page;Medium;1. Resize the browser window;The website is displayed correctly and all features are functional;Positive
-The registration form is accessible by screen readers;Accessibility;60s;User is on the registration page;Medium;1. Use a screen reader to navigate the registration form;All form fields and buttons are readable by the screen reader;Positive
-The registration form is accessible by keyboard only;Accessibility;60s;User is on the registration page;Medium;1. Use the keyboard to navigate the registration form;All form fields and buttons are accessible by keyboard;Positive
-The login form is accessible by screen readers;Accessibility;60s;User is on the login page;Medium;1. Use a screen reader to navigate the login form;All form fields and buttons are readable by the screen reader;Positive
-The login form is accessible by keyboard only;Accessibility;60s;User is on the login page;Medium;1. Use the keyboard to navigate the login form;All form fields and buttons are accessible by keyboard;Positive
-The password reset form is accessible by screen readers;Accessibility;60s;User is on the password reset page;Medium;1. Use a screen reader to navigate the password reset form;All form fields and buttons are readable by the screen reader;Positive
-The password reset form is accessible by keyboard only;Accessibility;60s;User is on the password reset page;Medium;1. Use the keyboard to navigate the password reset form;All form fields and buttons are accessible by keyboard;Positive
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Register a new user;Functional;60s;User is on the registration page;High;"1.1 Click the ""Create new user"" link, 1.2 Enter a valid email address, 1.3 Enter a secure password, 1.4 Click the ""Sign up"" button";User should be successfully registered and logged in
+Invalid email registration;Negative;30s;User is on the registration page;High;"1.1 Click the ""Create new user"" link, 1.2 Enter an invalid email address, 1.3 Enter a secure password, 1.4 Click the ""Sign up"" button";Error message should be displayed indicating an invalid email address
+Login with correct credentials;Functional;30s;User is on the login page;High;"2.1 Click the ""Login"" button, 2.2 Enter a valid email address, 2.3 Enter the correct password, 2.4 Click the ""Login"" button";User should be successfully logged in
+Login with incorrect email;Negative;30s;User is on the login page;High;"2.1 Click the ""Login"" button, 2.2 Enter an invalid email address, 2.3 Enter the correct password, 2.4 Click the ""Login"" button";Error message should be displayed indicating an invalid email address
+Login with incorrect password;Negative;30s;User is on the login page;High;"2.1 Click the ""Login"" button, 2.2 Enter a valid email address, 2.3 Enter an incorrect password, 2.4 Click the ""Login"" button";Error message should be displayed indicating an incorrect password
+Forgot password;Functional;60s;User is on the login page;High;"3.1 Click the ""Forgot my password"" button, 3.2 Enter a valid email address, 3.3 Click the ""Send reset link"" button";User should receive an email with a password reset link
+Forgot password with invalid email;Negative;30s;User is on the login page;High;"3.1 Click the ""Forgot my password"" button, 3.2 Enter an invalid email address, 3.3 Click the ""Send reset link"" button";Error message should be displayed indicating an invalid email address
+Reset password;Functional;60s;User has received the password reset email;High;"3.4 Click the password reset link in the email, 3.5 Enter a new secure password, 3.6 Confirm the new password, 3.7 Click the ""Reset password"" button";User should be able to log in with the new password
+Reset password with weak password;Negative;30s;User has received the password reset email;High;"3.4 Click the password reset link in the email, 3.5 Enter a weak password, 3.6 Confirm the weak password, 3.7 Click the ""Reset password"" button";Error message should be displayed indicating a weak password
+Compatibility testing;Compatibility;120s;User is on the registration page;Medium;Test the registration process on different browsers (Chrome, Firefox, Safari, Edge);The registration process should work correctly on all tested browsers
+Usability testing;Usability;120s;User is on the registration page;Medium;Test the registration process with different user personas (tech-savvy, non-tech-savvy, etc.);The registration process should be easy to understand and use for all tested user personas

@@ -1,37 +1,12 @@
-Title;Automation Type;Estimate;Preconditions;Priority;Steps(Step);Steps(Expected Results);Type
-Restore email - empty email field;Manual;30s;User is logged in;High;"1. Click ""Send"" button without entering email";"1. Error message ""Email is required"" is displayed";Negative
-Restore email - invalid email format;Manual;30s;User is logged in;High;"1. Enter invalid email format (e.g. test@test)
-2. Click ""Send"" button";"1. Error message ""Invalid email format"" is displayed";Negative
-Restore email - valid email format;Manual;30s;User is logged in;High;"1. Enter valid email format (e.g. test@test.com)
-2. Click ""Send"" button";1. Email restore request is sent successfully;Positive
-Restore email - email already registered;Manual;30s;User is logged in;Medium;"1. Enter email already registered to the system
-2. Click ""Send"" button";"1. Error message ""Email already registered"" is displayed";Negative
-Restore email - email not registered;Manual;30s;User is logged in;Medium;"1. Enter email not registered to the system
-2. Click ""Send"" button";1. Email restore request is sent successfully;Positive
-Restore email - web browser compatibility (Chrome);Manual;60s;User is logged in using Chrome browser;Medium;"1. Enter valid email format (e.g. test@test.com)
-2. Click ""Send"" button";1. Email restore request is sent successfully;Compatibility
-Restore email - web browser compatibility (Firefox);Manual;60s;User is logged in using Firefox browser;Medium;"1. Enter valid email format (e.g. test@test.com)
-2. Click ""Send"" button";1. Email restore request is sent successfully;Compatibility
-Restore email - web browser compatibility (Safari);Manual;60s;User is logged in using Safari browser;Medium;"1. Enter valid email format (e.g. test@test.com)
-2. Click ""Send"" button";1. Email restore request is sent successfully;Compatibility
-Restore email - web browser compatibility (Edge);Manual;60s;User is logged in using Edge browser;Medium;"1. Enter valid email format (e.g. test@test.com)
-2. Click ""Send"" button";1. Email restore request is sent successfully;Compatibility
-Restore email - mobile device compatibility (iPhone);Manual;60s;User is logged in using iPhone device;Medium;"1. Enter valid email format (e.g. test@test.com)
-2. Click ""Send"" button";1. Email restore request is sent successfully;Compatibility
-Restore email - mobile device compatibility (Android);Manual;60s;User is logged in using Android device;Medium;"1. Enter valid email format (e.g. test@test.com)
-2. Click ""Send"" button";1. Email restore request is sent successfully;Compatibility
-Restore email - usability (label visibility);Manual;30s;User is logged in;Medium;1. Check if email field and send button labels are visible;1. Email field and send button labels should be visible;Usability
-Restore email - usability (button accessibility);Manual;30s;User is logged in;Medium;1. Check if send button is accessible and clickable;1. Send button should be accessible and clickable;Usability
-Restore email - usability (error message visibility);Manual;30s;User is logged in;Medium;"1. Enter invalid email format
-2. Click ""Send"" button";"1. Error message ""Invalid email format"" is displayed and visible";Usability
-Restore email - usability (input field autocomplete);Manual;30s;User is logged in;Low;"1. Enter valid email format once
-2. Clear the email field
-3. Enter the same email again";1. Email field should autocomplete the email;Usability
-Restore email - usability (input field character limit);Manual;30s;User is logged in;Medium;"1. Enter more than 255 characters in the email field
-2. Click ""Send"" button";"1. Error message ""Email address too long"" is displayed";Usability
-Restore email - performance (response time);Automated;60s;User is logged in;Medium;1. Send email restore request;1. Email restore request should be processed and responded within 5 seconds;Functional
-Restore email - performance (load testing);Automated;300s;Multiple users are logged in;Medium;1. Send multiple email restore requests simultaneously;1. System should be able to handle the load and respond within acceptable time limits;Performance
-Restore email - security (SQL injection);Automated;60s;User is logged in;High;"1. Enter SQL injection string (e.g. ' OR 1=1 -- )
-2. Click ""Send"" button";"1. Error message ""Invalid email format"" is displayed and no SQL injection is executed";Security
-Restore email - security (cross-site scripting);Automated;60s;User is logged in;High;"1. Enter cross-site scripting string (e.g. <script>alert('XSS')</script>)
-2. Click ""Send"" button";"1. Error message ""Invalid email format"" is displayed and no cross-site scripting is executed";Security
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Verify email restore functionality with valid email;Functional;30s;User is logged in to the email client;High;"1. Click on the ""Settings"" button, 2. Select ""Restore emails"" option, 3. Enter a valid email address in the email field, 4. Click on the ""Send"" button";Restored emails should be displayed in the inbox
+Verify email restore functionality with invalid email;Negative;30s;User is logged in to the email client;High;"1. Click on the ""Settings"" button, 2. Select ""Restore emails"" option, 3. Enter an invalid email address in the email field, 4. Click on the ""Send"" button";Invalid email address error message should be displayed
+Verify email restore functionality with empty email field;Negative;30s;User is logged in to the email client;High;"1. Click on the ""Settings"" button, 2. Select ""Restore emails"" option, 3. Leave the email field empty, 4. Click on the ""Send"" button";Email field cannot be empty error message should be displayed
+Verify email restore functionality with correct email format;Positive;30s;User is logged in to the email client;High;"1. Click on the ""Settings"" button, 2. Select ""Restore emails"" option, 3. Enter an email address in the correct format in the email field, 4. Click on the ""Send"" button";Restored emails should be displayed in the inbox
+Verify email restore functionality with incorrect email format;Negative;30s;User is logged in to the email client;High;"1. Click on the ""Settings"" button, 2. Select ""Restore emails"" option, 3. Enter an email address in the incorrect format in the email field, 4. Click on the ""Send"" button";Invalid email address error message should be displayed
+Verify email restore functionality with non-existent email;Negative;30s;User is logged in to the email client;High;"1. Click on the ""Settings"" button, 2. Select ""Restore emails"" option, 3. Enter a non-existent email address in the email field, 4. Click on the ""Send"" button";Email not found error message should be displayed
+Verify email restore functionality on different browsers;Compatibility;60s;User is logged in to the email client on different browsers (Chrome, Firefox, Safari, Edge);Medium;"1. Open the email client on different browsers, 2. Click on the ""Settings"" button, 3. Select ""Restore emails"" option, 4. Enter a valid email address in the email field, 5. Click on the ""Send"" button";Restored emails should be displayed in the inbox on all browsers
+Verify email restore functionality on different screen resolutions;Compatibility;60s;User is logged in to the email client on different screen resolutions (1024x768, 1366x768, 1920x1080);Medium;"1. Change the screen resolution, 2. Click on the ""Settings"" button, 3. Select ""Restore emails"" option, 4. Enter a valid email address in the email field, 5. Click on the ""Send"" button";Restored emails should be displayed in the inbox on all screen resolutions
+Verify email restore functionality on different operating systems;Compatibility;90s;User is logged in to the email client on different operating systems (Windows, Mac, Linux);Medium;"1. Open the email client on different operating systems, 2. Click on the ""Settings"" button, 3. Select ""Restore emails"" option, 4. Enter a valid email address in the email field, 5. Click on the ""Send"" button";Restored emails should be displayed in the inbox on all operating systems
+Verify email restore functionality after restoring emails;Functional;30s;User has already restored emails;Medium;"1. Click on the ""Settings"" button, 2. Select ""Restore emails"" option, 3. Enter the same email address in the email field, 4. Click on the ""Send"" button";No new emails should be displayed in the inbox
+Verify email restore functionality with large number of emails;Performance;120s;User is logged in to the email client with a large number of emails (>1000);Low;"1. Click on the ""Settings"" button, 2. Select ""Restore emails"" option, 3. Enter a valid email address in the email field, 4. Click on the ""Send"" button";All restored emails should be displayed in the inbox within a reasonable time frame.

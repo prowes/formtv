@@ -1,5 +1,6 @@
 import os
 import fitz
+import prompts
 
 from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
@@ -15,10 +16,8 @@ def main():
     model = "mistral-medium"  # the best one.
 
     client = MistralClient(api_key=api_key)
-    testing_types = ["functional", "usability", "compatibility", "negative", "positive"]
-    columns = ["Title", "Automation Type", "Estimate", "Preconditions", "Priority", "Steps(Step)", "Steps(Expected Results)", "Type"]
-    prompt = f"You are a QA Engineer. Write a list of test cases based on requirements {reqs}, but not limited to them. Outcome should be ready for instant converting to the csv file with ; as a separator. Do not add any other text. Use different testing types, such as, but not limited to, {testing_types}. Use columns {columns}. One line is one test case, do not add extra blank lines. DO NOT add testing type values to the test cases descriptions. The output should be compatible with Testrail. Estimate should be measured in seconds, for example 30s, but it can be more or less. In Steps(Step), give all steps of the case, do not separate them with a semicolon. In Steps(Expected Results), give expected results after each step. Do not separate them with a semicolon."
 
+    prompt = f"Requirements: {reqs}. {prompts.prompt_sample}"
     chat_response = client.chat(
         model=model,
         messages=[ChatMessage(role="user", content=prompt)],
