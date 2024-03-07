@@ -1,0 +1,67 @@
+sep=;
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login with valid email and password;Functional;30s;User has valid email and password;High;1. Enter valid email address, 2. Enter valid password, 3. Click "Sign in";User is logged in successfully
+
+Login with invalid email and password;Negative;30s;User has invalid email and password;High;1. Enter invalid email address, 2. Enter invalid password, 3. Click "Sign in";Error message is displayed
+
+Login with empty email and password fields;Negative;30s;Email and password fields are empty;High;1. Leave email and password fields empty, 2. Click "Sign in";Error message is displayed for both fields
+
+Login with valid email and empty password;Negative;30s;User has valid email but empty password;High;1. Enter valid email address, 2. Leave password field empty, 3. Click "Sign in";Error message is displayed for password field
+
+Login with empty email and valid password;Negative;30s;User has valid password but empty email;High;1. Leave email field empty, 2. Enter valid password, 3. Click "Sign in";Error message is displayed for email field
+
+Forgot password with valid email;Functional;30s;User has forgotten password and has valid email;Medium;1. Click "Forgot your password?", 2. Enter valid email address, 3. Click "Submit";Password recovery email is sent to the user's email address
+
+Forgot password with invalid email;Negative;30s;User has forgotten password and has invalid email;Medium;1. Click "Forgot your password?", 2. Enter invalid email address, 3. Click "Submit";Error message is displayed
+
+Forgot password with empty email;Negative;30s;User has forgotten password and leaves email field empty;Medium;1. Click "Forgot your password?", 2. Leave email field empty, 3. Click "Submit";Error message is displayed
+
+Verify password strength requirements;Functional;30s;User is creating a new password;Medium;1. Enter a weak password, 2. Observe password strength indicator;Password strength indicator displays weak password
+
+Verify password strength requirements;Functional;30s;User is creating a new password;Medium;1. Enter a strong password, 2. Observe password strength indicator;Password strength indicator displays strong password
+
+Verify password visibility toggle;Functional;30s;User is entering a password;Medium;1. Click on the password visibility toggle, 2. Observe the password field;Password is displayed in plain text
+
+Verify password visibility toggle;Functional;30s;User is entering a password;Medium;1. Click on the password visibility toggle again, 2. Observe the password field;Password is hidden
+
+Verify password requirements on signup;Functional;30s;User is creating a new account;Medium;1. Enter a weak password, 2. Observe password strength indicator;Password strength indicator displays weak password
+
+Verify password requirements on signup;Functional;30s;User is creating a new account;Medium;1. Enter a strong password, 2. Observe password strength indicator;Password strength indicator displays strong password
+
+Verify email format on signup;Functional;30s;User is creating a new account;Medium;1. Enter an invalid email address, 2. Observe email field;Error message is displayed for invalid email format
+
+Verify email format on signup;Functional;30s;User is creating a new account;Medium;1. Enter a valid email address, 2. Observe email field;No error message is displayed for valid email format
+
+Verify password match on signup;Functional;30s;User is creating a new account;Medium;1. Enter a password in the password field, 2. Enter a different password in the confirm password field, 3. Observe confirm password field;Error message is displayed for mismatched passwords
+
+Verify password match on signup;Functional;30s;User is creating a new account;Medium;1. Enter a password in the password field, 2. Enter the same password in the confirm password field, 3. Observe confirm password field;No error message is displayed for matched passwords
+
+Verify "Keep me logged in" checkbox;Functional;30s;User is logging in;Medium;1. Select the "Keep me logged in" checkbox, 2. Enter valid email and password, 3. Click "Sign in";User is logged in and remains logged in after closing and reopening the browser
+
+Verify "Keep me logged in" checkbox;Functional;30s;User is logging in;Medium;1. Leave the "Keep me logged in" checkbox unselected, 2. Enter valid email and password, 3. Click "Sign in";User is logged in but is logged out after closing and reopening the browser
+
+Verify password reset link expiration;Functional;60s;User has requested a password reset and has received the reset link;Medium;1. Wait for 24 hours, 2. Click the password reset link, 3. Enter a new password;Error message is displayed indicating that the link has expired
+
+Verify password reset link functionality;Functional;60s;User has requested a password reset and has received the reset link;Medium;1. Click the password reset link, 2. Enter a new password, 3. Confirm the new password, 4. Click "Reset Password";Password is reset successfully
+
+Verify password reset link uniqueness;Functional;60s;User has requested a password reset and has received the reset link;Medium;1. Request a second password reset link, 2. Click the first password reset link, 3. Enter a new password, 4. Confirm the new password, 5. Click "Reset Password";Error message is displayed indicating that the link is invalid or has expired
+
+Verify password reset link functionality with invalid password;Negative;60s;User has requested a password reset and has received the reset link;Medium;1. Click the password reset link, 2. Enter an invalid password, 3. Confirm the password, 4. Click "Reset Password";Error message is displayed indicating that the password is invalid
+
+Verify password reset link functionality with empty password fields;Negative;60s;User has requested a password reset and has received the reset link;Medium;1. Click the password reset link, 2. Leave the password fields empty, 3. Click "Reset Password";Error message is displayed indicating that the password fields cannot be empty
+
+Verify password reset link functionality with mismatched passwords;Negative;60s;User has requested a password reset and has received the reset link;Medium;1. Click the password reset link, 2. Enter a password in the password field, 3. Enter a different password in the confirm password field, 4. Click "Reset Password";Error message is displayed indicating that the passwords do not match
+
+Verify password reset link functionality with weak password;Negative;60s;User has requested a password reset and has received the reset link;Medium;1. Click the password reset link, 2. Enter a weak password, 3. Confirm the password, 4. Click "Reset Password";Error message is displayed indicating that the password is weak
+
+Verify account creation with invalid email;Negative;30s;User is creating a new account;Medium;1. Enter an invalid email address, 2. Enter a password, 3. Confirm the password, 4. Click "Create account";Error message is displayed indicating that the email is invalid
+
+Verify account creation with empty email;Negative;30s;User is creating a new account;Medium;1. Leave the email field empty, 2. Enter a password, 3. Confirm the password, 4. Click "Create account";Error message is displayed indicating that the email field cannot be empty
+
+Verify account creation with weak password;Negative;30s;User is creating a new account;Medium;1. Enter a valid email address, 2. Enter a weak password, 3. Confirm the password, 4. Click "Create account";Error message is displayed indicating that the password is weak
+
+Verify account creation with mismatched passwords;Negative;30s;User is creating a new account;Medium;1. Enter a valid email address, 2. Enter a password in the password field, 3. Enter a different password in the confirm password field, 4. Click "Create account";Error message is displayed indicating that the passwords do not match
+
+Verify account creation with existing email;Negative;30s;User is creating a new account;Medium;1. Enter an email address that is already in use, 2. Enter a password, 3. Confirm the password, 4. Click "Create account";Error message is displayed indicating that the email is already in use
+
+Verify account creation with valid email and password;Functional;30s;User is creating a new account;Medium;1. Enter a valid email address, 2. Enter a password, 3. Confirm the password, 4. Click "Create account";Account is created successfully and user is logged in
