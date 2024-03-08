@@ -1,0 +1,43 @@
+sep=;
+Sure, here are 20 test cases for testing a login screen:
+
+1. Test case: Valid login with correct email and password
+   Expected result: User should be able to log in successfully and be redirected to the home page.
+2. Test case: Invalid login with incorrect email and password
+   Expected result: User should see an error message indicating that the email or password is incorrect.
+3. Test case: Empty email field
+   Expected result: User should see an error message indicating that the email field is required.
+4. Test case: Invalid email format
+   Expected result: User should see an error message indicating that the email format is invalid.
+5. Test case: Empty password field
+   Expected result: User should see an error message indicating that the password field is required.
+6. Test case: Short password (less than minimum length)
+   Expected result: User should see an error message indicating that the password is too short.
+7. Test case: Long password (more than maximum length)
+   Expected result: User should see an error message indicating that the password is too long.
+8. Test case: Password with no numeric characters
+   Expected result: User should see an error message indicating that the password must contain at least one numeric character.
+9. Test case: Password with no special characters
+   Expected result: User should see an error message indicating that the password must contain at least one special character.
+10. Test case: Password with no uppercase characters
+    Expected result: User should see an error message indicating that the password must contain at least one uppercase character.
+11. Test case: Password with no lowercase characters
+    Expected result: User should see an error message indicating that the password must contain at least one lowercase character.
+12. Test case: Forgot password link
+    Expected result: User should be redirected to the password reset page.
+13. Test case: Creating a new account
+    Expected result: User should be redirected to the account creation page.
+14. Test case: Login with a disabled account
+    Expected result: User should see an error message indicating that the account is disabled.
+15. Test case: Login with an account that has not been activated
+    Expected result: User should see an error message indicating that the account has not been activated.
+16. Test case: Login with an account that has been locked out due to too many failed attempts
+    Expected result: User should see an error message indicating that the account has been locked out.
+17. Test case: Login with an account that has been deleted
+    Expected result: User should see an error message indicating that the account does not exist.
+18. Test case: Login with an account that has expired
+    Expected result: User should see an error message indicating that the account has expired.
+19. Test case: Login with an account that has been suspended
+    Expected result: User should see an error message indicating that the account has been suspended.
+20. Test case: Login with an account that has been banned
+    Expected result: User should see an error message indicating that the account has been banned.
