@@ -15,9 +15,9 @@ def main():
 
     #print(texts_from_pics.replace('\n', ' '))
 
-    prompt = f"UI elements, links and forms: {texts_from_pics}. {prompts.prompt_sample}."
+    prompt = f"UI elements, links and forms: {texts_from_pics}. {prompts.small_prompt}."
     print(prompt)
-    os.system(f'ollama run codellama:7b-instruct {prompt} > results/test_cases_pic.csv')
+    os.system(f'ollama run codellama:7b-instruct {prompt} > results/test_cases_small_prompt.csv')
 
 if __name__ == "__main__":
     main()
