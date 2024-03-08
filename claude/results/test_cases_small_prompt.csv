@@ -1,0 +1,44 @@
+sep=;
+Here are 20 essential test cases for testing a login screen with the given UI elements, links, and forms:
+
+1. Verify that the login screen is displayed with all the required fields (Email, Password) and links (Forgot your password?, Create account).
+
+2. Test a successful login with valid email and password credentials.
+
+3. Test a failed login with an invalid email format.
+
+4. Test a failed login with an incorrect password.
+
+5. Verify that the password field masks the entered characters.
+
+6. Test the login with an email address that doesn't exist in the system.
+
+7. Attempt to log in with an empty email field and verify the error message.
+
+8. Attempt to log in with an empty password field and verify the error message.
+
+9. Test the login with both email and password fields left empty and verify the error message.
+
+10. Verify that the "Sign in" button is enabled only when both email and password fields are filled.
+
+11. Test the login with a valid email but an incorrect case (uppercase/lowercase) and ensure it is not case-sensitive.
+
+12. Verify that the user is redirected to the appropriate page upon successful login.
+
+13. Test the "Forgot your password?" link and ensure it redirects to the password recovery page.
+
+14. Verify that the password recovery page asks for the registered email address.
+
+15. Test the password recovery functionality with a valid email address and ensure a recovery email is sent.
+
+16. Test the password recovery functionality with an unregistered email address and verify the error message.
+
+17. Verify that the "Create account" link redirects to the user registration page.
+
+18. Test the login with a password that exceeds the maximum character limit and verify the error message.
+
+19. Verify that the user session is securely managed (e.g., session ID is not exposed in the URL, session timeout after inactivity).
+
+20. Test the login screen on different browsers and devices to ensure cross-browser and cross-device compatibility.
+
+These test cases cover the essential functionalities and validations of a login screen. However, depending on the specific requirements and security considerations of your application, you may need to include additional test cases to ensure a comprehensive testing coverage.
