@@ -1,0 +1,22 @@
+
+1. User enters valid email and password, clicks on "Sign In" button, and is successfully redirected to their dashboard page.
+2. User enters invalid email and valid password, clicks on "Sign In" button, and sees an error message indicating that the email address is not recognized.
+3. User enters valid email but empty password, clicks on "Sign In" button, and sees an error message indicating that the password cannot be blank.
+4. User enters invalid email and empty password, clicks on "Sign In" button, and sees both error messages indicating that the email address is not recognized and the password cannot be blank.
+5. User clicks on "Forgot your password?" link and is redirected to a page where they can reset their password.
+6. User enters valid email but does not receive an email with a password reset link after clicking on "Forgot your password?" link.
+7. User enters invalid email and clicks on "Create account" button, and sees an error message indicating that the email address is not recognized.
+8. User enters valid email and clicks on "Create account" button, but does not receive a confirmation email after creating their account.
+9. User clicks on "Sign In" button without entering any information, and sees an error message indicating that both email and password are required fields.
+10. User enters invalid email address and valid password, clicks on "Sign In" button, and sees an error message indicating that the email address is not recognized.
+11. User enters valid email address but does not enter a password, clicks on "Sign In" button, and sees an error message indicating that the password cannot be blank.
+12. User enters invalid email address and empty password, clicks on "Sign In" button, and sees both error messages indicating that the email address is not recognized and the password cannot be blank.
+13. User enters valid email address but does not receive a confirmation email after creating their account.
+14. User receives a confirmation email after creating their account, but cannot verify their email address.
+15. User clicks on "Forgot your password?" link and is redirected to a page where they can reset their password.
+16. User enters valid email address but does not receive an email with a password reset link after clicking on "Forgot your password?" link.
+17. User enters invalid email address and clicks on "Create account" button, and sees an error message indicating that the email address is not recognized.
+18. User enters valid email address and clicks on "Create account" button but does not receive a confirmation email after creating their account.
+19. User receives a confirmation email after creating their account, but cannot verify their email address.
+20. User enters valid email address and password but does not see the login page after clicking on "Sign In" button.
+
