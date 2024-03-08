@@ -1,0 +1,57 @@
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password;Functional;30s;Logged out;High;1. Enter email address in the input field.;2. Click on the "Sign In" button.;3. Verify that user is logged in and redirected to their dashboard.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Forgot Password;Functional;60s;Logged out;Medium;1. Click on the "Forgot your password?" link.;2. Enter email address in the input field and click on the "Send" button.;3. Verify that an email has been sent to the user's email address with a reset link.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Create Account;Functional;60s;Logged out;Medium;1. Click on the "Create account" button.;2. Enter email address in the input field and click on the "Sign Up" button.;3. Verify that an account has been created for the user and redirected to their dashboard.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Wrong Credentials;Negative;60s;Logged out;Medium;1. Enter wrong email address in the input field.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Missing Credentials;Negative;60s;Logged out;Medium;1. Click on the "Sign In" button without entering any credentials.;2. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Invalid Credentials;Negative;60s;Logged out;Medium;1. Enter invalid email address in the input field.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Locked Account;Negative;60s;Logged out;Medium;1. Enter locked email address in the input field.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Disabled Account;Negative;60s;Logged out;Medium;1. Enter disabled email address in the input field.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Wrong Password;Negative;60s;Logged out;Medium;1. Enter correct email address in the input field.;2. Enter wrong password in the input field and click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Missing Password;Negative;60s;Logged out;Medium;1. Enter email address in the input field but no password.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Invalid Password;Negative;60s;Logged out;Medium;1. Enter email address in the input field and an invalid password.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Locked Password;Negative;60s;Logged out;Medium;1. Enter locked password in the input field.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Disabled Password;Negative;60s;Logged out;Medium;1. Enter disabled password in the input field.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Wrong Security Question;Negative;60s;Logged out;Medium;1. Enter correct email address in the input field.;2. Enter wrong security question and answer in the input fields.;3. Click on the "Sign In" button.;4. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Missing Security Question;Negative;60s;Logged out;Medium;1. Enter correct email address in the input field but no security question and answer.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Invalid Security Question;Negative;60s;Logged out;Medium;1. Enter correct email address in the input field and an invalid security question and answer.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Wrong Security Question Answer;Negative;60s;Logged out;Medium;1. Enter correct email address in the input field.;2. Enter wrong security question and answer in the input fields.;3. Click on the "Sign In" button.;4. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Missing Security Question Answer;Negative;60s;Logged out;Medium;1. Enter correct email address in the input field but no security question and answer.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
+
+Title;Type;Estimate;Preconditions;Priority;Steps;Expected Results
+Login Email Password Invalid Security Question Answer;Negative;60s;Logged out;Medium;1. Enter correct email address in the input field and an invalid security question and answer.;2. Click on the "Sign In" button.;3. Verify that user is not logged in and an error message is displayed.
