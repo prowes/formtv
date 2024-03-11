@@ -16,7 +16,7 @@ def main():
     api_response = api_instance.image_ocr_post(image_file)
     texts_from_pics = (api_response._text_result.replace('\n', ' '))  # get texts from the image
 
-    prompt = f"UI elements, links and forms: {texts_from_pics}. {prompts.prompt_sample}."
+    prompt = f"UI elements, links and forms: {texts_from_pics}. {prompts.small_prompt}."
 
     message = client.messages.create(
         model="claude-3-opus-20240229",
