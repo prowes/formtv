@@ -28,7 +28,7 @@ def main():
     cases = message.content[0].text
     print(cases)
 
-    with open("results\\test_cases_small_prompt.csv", "w") as file:
+    with open("results\\test_cases_pic.csv", "w") as file:
         file.write("sep=;\n")  # User-friendly Excel
         file.write(cases)
 
