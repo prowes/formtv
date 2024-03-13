@@ -19,6 +19,7 @@ def main():
     if cases[0] == '"':
         cases = cases[1:-1]# remove " symbols
 
+    print(cases)
     with open("results\\test_cases_prompt.csv", "w") as file:
         file.write("sep=;\n")  # User-friendly Excel
         file.write(cases)

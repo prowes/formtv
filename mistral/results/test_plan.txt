@@ -1,0 +1,31 @@
+sep=;
+Sure! Here is a basic test plan for the login screen of a web application:
+
+1. Functional Testing:
+	* Verify that the login screen is displayed when the user navigates to the login page.
+	* Verify that the login screen contains the appropriate input fields (e.g. username/email and password).
+	* Verify that the login screen contains a "Forgot Password" link.
+	* Verify that the login screen contains a "Sign up" link.
+	* Verify that the login button is enabled only when the username/email and password fields are filled in.
+	* Verify that the user is able to log in with valid credentials.
+	* Verify that an error message is displayed if the user enters invalid credentials.
+	* Verify that an error message is displayed if the user tries to log in with an account that has been locked or disabled.
+	* Verify that the user is able to log out of their account.
+2. User Interface Testing:
+	* Verify that the login screen is visually appealing and easy to use.
+	* Verify that the input fields are properly aligned and sized.
+	* Verify that the login button is clearly visible and easy to click.
+	* Verify that the error messages are displayed in a clear and concise manner.
+3. Security Testing:
+	* Verify that the login screen uses SSL/TLS encryption.
+	* Verify that the password field masks the user's input.
+	* Verify that the password field has a minimum length and complexity requirement.
+	* Verify that the login form is protected against SQL injection and cross-site scripting (XSS) attacks.
+	* Verify that the login form has a mechanism to prevent brute force attacks (e.g. account lockout after a certain number of failed login attempts).
+4. Performance Testing:
+	* Verify that the login screen loads quickly and efficiently.
+	* Verify that the login process is fast and responsive.
+	* Verify that the login screen can handle a large number of concurrent users.
+5. Compatibility Testing:
+	* Verify that the login screen is compatible with all supported browsers.
+	* Verify that the login screen is compatible with all supported mobile devices and screen sizes.
