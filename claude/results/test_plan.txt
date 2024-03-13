@@ -1,0 +1,69 @@
+Sure! Here's a sample test plan for the login screen:
+
+Test Plan: Login Screen
+
+Objectives:
+- Verify the functionality, usability, and security of the login screen.
+- Ensure that users can successfully log in with valid credentials and are prevented from logging in with invalid credentials.
+
+Test Cases:
+
+1. UI and Layout:
+   - Verify that the login screen displays all the necessary elements (username field, password field, login button, forgot password link, etc.).
+   - Check the positioning, spacing, and alignment of the elements.
+   - Ensure that the login screen is responsive and displays correctly on different screen sizes and devices.
+
+2. Valid Login:
+   - Enter a valid username and password combination.
+   - Click the login button.
+   - Verify that the user is successfully logged in and redirected to the appropriate page.
+
+3. Invalid Username:
+   - Enter an invalid or non-existent username.
+   - Enter a valid password.
+   - Click the login button.
+   - Verify that an appropriate error message is displayed, indicating an invalid username.
+
+4. Invalid Password:
+   - Enter a valid username.
+   - Enter an invalid password.
+   - Click the login button.
+   - Verify that an appropriate error message is displayed, indicating an invalid password.
+
+5. Empty Fields:
+   - Leave the username and password fields empty.
+   - Click the login button.
+   - Verify that an appropriate error message is displayed, prompting the user to enter both username and password.
+
+6. Case Sensitivity:
+   - Enter a valid username and password with incorrect casing.
+   - Click the login button.
+   - Verify that the login is successful if the system is case-insensitive, or an appropriate error message is displayed if the system is case-sensitive.
+
+7. Forgot Password:
+   - Click on the forgot password link.
+   - Verify that the user is redirected to the forgot password page.
+
+8. Remember Me:
+   - Enter valid login credentials.
+   - Check the "Remember Me" checkbox (if available).
+   - Log in and then log out.
+   - Verify that the username field is pre-filled on the next login attempt.
+
+9. Session Timeout:
+   - Log in with valid credentials.
+   - Stay idle for a specified period (e.g., 30 minutes).
+   - Verify that the user is automatically logged out and redirected to the login screen.
+
+10. Security:
+    - Attempt to log in with SQL injection or cross-site scripting (XSS) payloads in the username and password fields.
+    - Verify that the system handles these attempts securely and does not allow unauthorized access.
+
+11. Error Handling:
+    - Simulate error scenarios, such as network connectivity issues or server errors.
+    - Verify that appropriate error messages are displayed to the user.
+
+12. Localization:
+    - If the application supports multiple languages, verify that the login screen is properly localized and displays the correct language based on user preferences.
+
+Note: This is a basic test plan, and the actual test cases may vary depending on the specific requirements and features of your login screen. Additionally, consider including both positive and negative test scenarios to ensure comprehensive testing coverage.
